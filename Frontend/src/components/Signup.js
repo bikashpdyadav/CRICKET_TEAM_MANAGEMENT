@@ -1,7 +1,7 @@
 const Signup = () => {
     return (
-        <div className="h-screen w-full flex justify-center items-center bg-orange-300">
-            <div className="p-24 bg-orange-200 rounded-3xl">
+        <div className="h-full flex justify-center items-center bg-orange-300">
+            <div className="m-8 p-16 bg-orange-200 rounded-3xl">
                 <div className="flex flex-col items-start justify-center">
                     <h1 className="text-5xl font-bold mb-6">Sign up</h1>
                     <p className="text-2xl font-semibold my-6">Please fill in this form to create an account</p>

@@ -1,27 +1,53 @@
+import { Link } from 'react-router-dom';
 const Player = () => {
     return (
-        <div className="h-screen w-full flex justify-between items-center bg-orange-300 p-16 pr-4">
-            <div className="w-1/3 flex justify-center items-center mr-16">
-                <h1 className="text-6xl font-bold">Team Details</h1>
+        <div className="h-full p-16 flex flex-col gap-8 bg-orange-300">
+            <div className="p-4 flex flex-wrap justify-between bg-orange-200 rounded-3xl">
+                <div className="m-4 flex gap-2">
+                    <input className="border border-solid border-black px-2" type="text" placeholder="Search"/>
+                    <h3 className="text-2xl font-semibold">Search a player</h3>
+                </div>
+                <Link to="/registerplayer">
+                    <div className="mx-16 my-2 flex items-center justify-center">
+                        <button className="p-2 border border-solid border-black rounded-xl hover:bg-orange-500 hover:cursor-pointer">Register a player</button>
+                    </div>
+                </Link>
             </div>
-            <div className="w-2/3 p-12 bg-orange-200 rounded-3xl">
-                <h1 className="text-4xl font-semibold my-4">Enter the details of player</h1>
-                <div className="w-full">
-                    <input type="text" className="border border-solid border-black w-full my-4 p-2" placeholder="Enter the player name"/>
-                    <input type="number" className="border border-solid border-black w-full my-4 p-2" placeholder="Enter the player age"/>
-                    <input type="text" className="border border-solid border-black w-full my-4 p-2" placeholder="Enter the player gender"/>
-                    <input type="text" className="border border-solid border-black w-full my-4 p-2" placeholder="Enter the role of player"/>
-                    <input type="number" className="border border-solid border-black w-full my-4 p-2" placeholder="Enter the jersey number"/>
-                    <input type="text" className="border border-solid border-black w-full my-4 p-2" placeholder="Enter the address"/>
-                </div>   
-                <div>
-                    <button className="border border-solid border-black my-4 p-2 w-full rounded-2xl hover:bg-orange-400">Submit</button>
-                    <button className="border border-solid border-black my-4 p-2 w-full rounded-2xl hover:bg-orange-400">Reset</button>
+            <div className="h-full p-12 flex flex-col flex-wrap bg-orange-200 rounded-3xl">
+                <h1 className="text-4xl font-semibold my-4">Trending Searches</h1>
+                <Link to="/playercard">
+                    <div className="flex border border-solid border-black rounded-3xl w-fit m-4 p-4">
+                        <img className="mx-4" src="" alt="Default image"/>
+                        <h2>Default Player</h2>
+                    </div>
+                </Link>
+                <div className="flex border border-solid border-black rounded-3xl w-fit m-4 p-4">
+                    <img className="mx-4" src="" alt="Default image"/>
+                    <h2>Default Player</h2>
+                </div>
+                <div className="flex border border-solid border-black rounded-3xl w-fit m-4 p-4">
+                    <img className="mx-4" src="" alt="Default image"/>
+                    <h2>Default Player</h2>
+                </div>
+                <div className="flex border border-solid border-black rounded-3xl w-fit m-4 p-4">
+                    <img className="mx-4" src="" alt="Default image"/>
+                    <h2>Default Player</h2>
+                </div>
+                <div className="flex border border-solid border-black rounded-3xl w-fit m-4 p-4">
+                    <img className="mx-4" src="" alt="Default image"/>
+                    <h2>Default Player</h2>
+                </div>
+                <div className="flex border border-solid border-black rounded-3xl w-fit m-4 p-4">
+                    <img className="mx-4" src="" alt="Default image"/>
+                    <h2>Default Player</h2>
+                </div>
+                <div className="flex border border-solid border-black rounded-3xl w-fit m-4 p-4">
+                    <img className="mx-4" src="" alt="Default image"/>
+                    <h2>Default Player</h2>
                 </div>
             </div>
         </div>
-    )
-}
+    );
+};
 
-
-export default Player;
+export default Player; 

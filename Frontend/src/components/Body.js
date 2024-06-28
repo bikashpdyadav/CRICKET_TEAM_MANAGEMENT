@@ -2,7 +2,7 @@ import { FRONT_BG_URL } from "../utils/constants";
 
 const Body = () => {
     return (
-        <div className="h-screen flex bg-orange-300">
+        <div className="h-full flex bg-orange-300">
             <div className="p-24 flex flex-col justify-items-center">
                 <h1 className="text-6xl font-bold mt-16 p-4">
                     Looking Forward To Tournament

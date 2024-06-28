@@ -6,12 +6,16 @@ import Body from "./components/Body";
 import Footer from "./components/Footer";
 import Tournament from "./components/Tournament";
 import Team from "./components/Team";
-import Player from "./components/Player";
+import RegisterPlayer from "./components/RegisterPlayer";
 import Staff from "./components/Staff";
 import Schedule from "./components/Schedule";
 import Location from "./components/Location";
 import Signup from "./components/Signup";
 import Login from "./components/Login";
+import Player from "./components/Player";
+import RegisterTeam from "./components/RegisterTeam";
+import RegisterTournament from "./components/RegisterTournament";
+import PlayerCard from "./components/PlayerCard";
 
 const AppLayout = () => {
     return (
@@ -41,8 +45,8 @@ const appRouter = createBrowserRouter([
                 element: <Team/>,
             },
             {
-                path: "/player",
-                element: <Player/>,
+                path: "/registerplayer",
+                element: <RegisterPlayer/>,
             },
             {
                 path: "/staff",
@@ -63,6 +67,22 @@ const appRouter = createBrowserRouter([
             {
                 path: "/login",
                 element: <Login/>,
+            },
+            {
+                path: "/player",
+                element: <Player/>,
+            },
+            {
+                path: "/registerteam",
+                element: <RegisterTeam/>,
+            },
+            {
+                path: "/registertournament",
+                element: <RegisterTournament/>,
+            },
+            {
+                path: "/playercard",
+                element: <PlayerCard/>,
             },
         ]
     },
