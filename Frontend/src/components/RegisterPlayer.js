@@ -1,6 +1,6 @@
 const RegisterPlayer = () => {
     return (
-        <div className="h-screen w-full flex justify-between items-center bg-orange-300 p-16 pr-4">
+        <div className="h-full flex justify-between items-center bg-orange-300 p-16 pr-4">
             <div className="w-1/3 flex justify-center items-center mr-16">
                 <h1 className="text-6xl font-bold">Player Details</h1>
             </div>

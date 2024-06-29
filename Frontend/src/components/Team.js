@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+
 const Team = () => {
     return (
         <div className="h-full p-16 flex flex-col gap-8 bg-orange-300">
@@ -16,31 +17,31 @@ const Team = () => {
             <div className="h-full p-12 flex flex-col flex-wrap bg-orange-200 rounded-3xl">
                 <h1 className="text-4xl font-semibold my-4">Trending Searches</h1>
                 <div className="flex border border-solid border-black rounded-3xl w-fit m-4 p-4">
-                    <img className="mx-4" src="" alt="Default team image"/>
+                    <img className="mx-4 border border-solid border-black" src="" alt="Default team image"/>
                     <h2>Default Team Name</h2>
                 </div>
                 <div className="flex border border-solid border-black rounded-3xl w-fit m-4 p-4">
-                    <img className="mx-4" src="" alt="Default team image"/>
+                    <img className="mx-4 border border-solid border-black" src="" alt="Default team image"/>
                     <h2>Default Team Name</h2>
                 </div>
                 <div className="flex border border-solid border-black rounded-3xl w-fit m-4 p-4">
-                    <img className="mx-4" src="" alt="Default team image"/>
+                    <img className="mx-4 border border-solid border-black" src="" alt="Default team image"/>
                     <h2>Default Team Name</h2>
                 </div>
                 <div className="flex border border-solid border-black rounded-3xl w-fit m-4 p-4">
-                    <img className="mx-4" src="" alt="Default team image"/>
+                    <img className="mx-4 border border-solid border-black" src="" alt="Default team image"/>
                     <h2>Default Team Name</h2>
                 </div>
                 <div className="flex border border-solid border-black rounded-3xl w-fit m-4 p-4">
-                    <img className="mx-4" src="" alt="Default team image"/>
+                    <img className="mx-4 border border-solid border-black" src="" alt="Default team image"/>
                     <h2>Default Team Name</h2>
                 </div>
                 <div className="flex border border-solid border-black rounded-3xl w-fit m-4 p-4">
-                    <img className="mx-4" src="" alt="Default team image"/>
+                    <img className="mx-4 border border-solid border-black" src="" alt="Default team image"/>
                     <h2>Default Team Name</h2>
                 </div>
                 <div className="flex border border-solid border-black rounded-3xl w-fit m-4 p-4">
-                    <img className="mx-4" src="" alt="Default team image"/>
+                    <img className="mx-4 border border-solid border-black" src="" alt="Default team image"/>
                     <h2>Default Team Name</h2>
                 </div>
             </div>
