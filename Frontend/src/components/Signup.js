@@ -1,3 +1,5 @@
+import {Link} from 'react-router-dom';
+
 const Signup = () => {
     return (
         <div className="h-full flex justify-center items-center bg-orange-300">
@@ -25,8 +27,16 @@ const Signup = () => {
                     </div>
                 </div>   
                 <div className="flex items-center justify-center">
-                    <button className="border border-solid border-black mx-8 p-2 w-full rounded-2xl hover:bg-orange-400">Cancel</button>
-                    <button className="border border-solid border-black mx-8 p-2 w-full rounded-2xl hover:bg-orange-400">Signup</button>
+                    <button className="border border-solid border-black mx-6 p-2 w-full rounded-2xl hover:bg-orange-400">Cancel</button>
+                    <Link to="/" className='w-full'>
+                        <button className="border border-solid border-black p-2 w-full rounded-2xl hover:bg-orange-400">Signup</button>
+                    </Link>
+                </div>
+                <div className="m-4 p-4 flex items-center justify-center">
+                    <h3 className="p-4 text-2xl font-semibold">Already signed up ?</h3>
+                    <Link to="/login" className="w-1/3">
+                        <button className="border border-solid border-black p-2 w-full rounded-2xl hover:bg-orange-400">Login</button>
+                    </Link>
                 </div>
             </div>
         </div>

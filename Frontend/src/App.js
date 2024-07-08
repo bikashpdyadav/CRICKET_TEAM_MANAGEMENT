@@ -1,9 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import {createBrowserRouter,RouterProvider,Outlet} from "react-router-dom";
-import Header from "./components/Header";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { AuthProvider } from "./components/AuthContext";
+import MainApp from "./components/MainApp";
+import AppLayout from "./components/AppLayout";
 import Body from "./components/Body";
-import Footer from "./components/Footer";
 import Tournament from "./components/Tournament";
 import Team from "./components/Team";
 import RegisterPlayer from "./components/RegisterPlayer";
@@ -17,76 +18,38 @@ import RegisterTeam from "./components/RegisterTeam";
 import RegisterTournament from "./components/RegisterTournament";
 import PlayerCard from "./components/PlayerCard";
 
-const AppLayout = () => {
-    return (
-        <div className="app">
-            <Header/>
-            <Outlet/>
-            <Footer/>
-        </div>
-    )
-}
-
 const appRouter = createBrowserRouter([
     {
         path: "/",
-        element: <AppLayout/>,
+        element: <MainApp />,
         children: [
             {
                 path: "/",
-                element: <Body/>,
+                element: <AppLayout />,
+                children: [
+                    { path: "/", element: <Body /> },
+                    { path: "/tournament", element: <Tournament /> },
+                    { path: "/team", element: <Team /> },
+                    { path: "/registerplayer", element: <RegisterPlayer /> },
+                    { path: "/staff", element: <Staff /> },
+                    { path: "/schedule", element: <Schedule /> },
+                    { path: "/location", element: <Location /> },
+                    { path: "/player", element: <Player /> },
+                    { path: "/registerteam", element: <RegisterTeam /> },
+                    { path: "/registertournament", element: <RegisterTournament /> },
+                    { path: "/playercard", element: <PlayerCard /> },
+                ],
             },
-            {
-                path: "/tournament",
-                element: <Tournament/>,
-            },
-            {
-                path: "/team",
-                element: <Team/>,
-            },
-            {
-                path: "/registerplayer",
-                element: <RegisterPlayer/>,
-            },
-            {
-                path: "/staff",
-                element: <Staff/>,
-            },
-            {
-                path: "/schedule",
-                element: <Schedule/>,
-            },
-            {
-                path: "/location",
-                element: <Location/>,
-            },
-            {
-                path: "/signup",
-                element: <Signup/>,
-            },
-            {
-                path: "/login",
-                element: <Login/>,
-            },
-            {
-                path: "/player",
-                element: <Player/>,
-            },
-            {
-                path: "/registerteam",
-                element: <RegisterTeam/>,
-            },
-            {
-                path: "/registertournament",
-                element: <RegisterTournament/>,
-            },
-            {
-                path: "/playercard",
-                element: <PlayerCard/>,
-            },
-        ]
+        ],
     },
-    
+    { path: "/login", element: <Login /> },
+    { path: "/signup", element: <Signup /> },
 ]);
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<RouterProvider router={appRouter}/>);
+root.render(
+    <AuthProvider>
+        <RouterProvider router={appRouter} />
+    </AuthProvider>
+);
+
